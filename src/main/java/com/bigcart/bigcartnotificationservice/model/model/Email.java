@@ -1,12 +1,14 @@
 package com.bigcart.bigcartnotificationservice.model.model;
 
 public class Email {
+    private String userName;
     private String to;
     private String subject;
     private String body;
     Email() {}
 
-    public Email(String to, String subject, String body) {
+    public Email(String userName, String to, String subject, String body) {
+        this.userName = userName;
         this.to = to;
         this.subject = subject;
         this.body = body;
@@ -30,6 +32,14 @@ public class Email {
 
     public String getBody() {
         return body;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
     public void setBody(String body) {

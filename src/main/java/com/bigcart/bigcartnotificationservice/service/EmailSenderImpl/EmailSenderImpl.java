@@ -28,7 +28,7 @@ public class EmailSenderImpl implements EmailSender {
         message.setTo(email.getTo());
         message.setSubject(email.getSubject());
         message.setText(
-                "Dear Customer," +
+                "Dear " + email.getUserName() + "," +
                         "<br>Greeting from BigCart." +
                         "<br><p>" + email.getBody() + "</p>" +
                         "<br>" +

@@ -21,9 +21,7 @@ public class EmailController {
 
     @PostMapping("/")
     public ResponseEntity<Email> notify(@RequestBody Email email) throws MessagingException {
-        System.out.println(email.toString());
        emailSender.sendEmail(email);
-       System.out.println("done");
        return  new ResponseEntity<Email>(email, HttpStatus.OK);
 
     }
